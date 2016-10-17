@@ -15,6 +15,7 @@ insert into courses (id, code, name, units) values
     (105, 'CS 5992', 'Thesis or Project II', 1);
 
 insert into departments (id, name) values (200, 'Computer Science');
+insert into departments (id, name) values (201, 'Electrical Engineering');
 
 insert into programs (id, department_id, name) values
     (300, 200, 'CS Graduate Program (Theis/Project Option)');

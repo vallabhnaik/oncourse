@@ -70,6 +70,11 @@ public class User implements Serializable, UserDetails {
         enabled = true;
     }
 
+    public String getName()
+    {
+        return firstName + " " + lastName;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities()
     {

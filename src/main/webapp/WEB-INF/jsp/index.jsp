@@ -7,17 +7,18 @@
 <title>OnCourse</title>
 </head>
 <body>
-<h2>Welcome to OnCourse</h2>
+<h2>OnCourse</h2>
 <p>
   <security:authorize access="anonymous">
     <a href="<c:url value='/login.html' />">Login</a>
   </security:authorize>
   <security:authorize access="authenticated">
     <security:authorize access="hasAnyRole('ADMIN','ADVISOR')">
-      Courses |
-      Programs |
+      <a href="course/list.html">Courses</a> |
+      <a href="department/list.html">Departments</a> |
+      <a href="program/list.html">Programs</a> |
     </security:authorize>
-    <a href="/grade/list.html">Grades</a> |
+    <a href="grade/list.html">Grades</a> |
     <a href="<c:url value='/logout' />">Logout</a>
   </security:authorize>
 </p>
