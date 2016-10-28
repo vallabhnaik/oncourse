@@ -13,7 +13,7 @@
 <c:forEach items="${programs}" var="program">
 <tr>
   <td>${program.department.name}</td>
-  <td>${program.name}</td>
+  <td><a href="view.html?id=${program.id}">${program.name}</a></td>
 </tr>
 </c:forEach>
 </table>
