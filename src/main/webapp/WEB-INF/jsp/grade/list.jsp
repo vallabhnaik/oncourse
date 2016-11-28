@@ -7,9 +7,9 @@
 <title>OnCourse - Grades</title>
 </head>
 <body>
-<h2><a href="../index.html">OnCourse</a></h2>
+<h2><a href="..">OnCourse</a></h2>
 <h3>${user.name}'s Grades</h3>
-<form action="add.html" method="post">
+<form action="add" method="post">
 <p>
   <select name="season">
     <option value="F">Fall</option>

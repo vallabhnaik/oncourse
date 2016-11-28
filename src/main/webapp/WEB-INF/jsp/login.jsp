@@ -5,7 +5,7 @@
 <title>Login</title>
 </head>
 <body>
-<h2><a href="index.html">OnCourse</a></h2>
+<h2><a href=".">OnCourse</a></h2>
 <h3>Login</h3>
 <form action="login" method="post">
 <table>

@@ -13,7 +13,7 @@ public class DepartmentController {
     @Autowired
     private DepartmentDao departmentDao;
 
-    @RequestMapping("/department/list.html")
+    @RequestMapping("/department/list")
     public String list( ModelMap models )
     {
         models.put( "departments", departmentDao.getDepartments() );

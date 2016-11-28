@@ -30,7 +30,7 @@ public class GradeRecordController {
     @Autowired
     private GradeRecordDao gradeRecordDao;
 
-    @RequestMapping("/grade/list.html")
+    @RequestMapping("/grade/list")
     public String list( ModelMap models )
     {
         int year = Calendar.getInstance().get( Calendar.YEAR );
@@ -47,7 +47,7 @@ public class GradeRecordController {
         return "grade/list";
     }
 
-    @RequestMapping("/grade/add.html")
+    @RequestMapping("/grade/add")
     public String add( @RequestParam String season, @RequestParam Integer year,
         @RequestParam Long courseId, @RequestParam Long gradeId )
     {
@@ -57,7 +57,7 @@ public class GradeRecordController {
         gradeRecord.setCourse( courseDao.getCourse( courseId ) );
         gradeRecord.setGrade( gradeDao.getGrade( gradeId ) );
         gradeRecord = gradeRecordDao.saveGradeRecord( gradeRecord );
-        return "redirect:list.html";
+        return "redirect:list";
     }
 
 }

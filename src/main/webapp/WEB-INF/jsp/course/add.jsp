@@ -6,7 +6,7 @@
 <title>OnCourse - Add Course</title>
 </head>
 <body>
-<h2><a href="../index.html">OnCourse</a></h2>
+<h2><a href="..">OnCourse</a></h2>
 <h3>Add Course</h3>
 <form:form modelAttribute="course">
 <table>

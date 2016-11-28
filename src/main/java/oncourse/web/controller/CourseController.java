@@ -19,39 +19,39 @@ public class CourseController {
     @Autowired
     private CourseDao courseDao;
 
-    @RequestMapping("/course/list.html")
+    @RequestMapping("/course/list")
     public String list( ModelMap models )
     {
         models.put( "courses", courseDao.getCourses() );
         return "course/list";
     }
 
-    @RequestMapping(value = "/course/add.html", method = RequestMethod.GET)
+    @RequestMapping(value = "/course/add", method = RequestMethod.GET)
     public String add( ModelMap models )
     {
         models.put( "course", new Course() );
         return "course/add";
     }
 
-    @RequestMapping(value = "/course/add.html", method = RequestMethod.POST)
+    @RequestMapping(value = "/course/add", method = RequestMethod.POST)
     public String add( @ModelAttribute Course course )
     {
         course = courseDao.saveCourse( course );
-        return "redirect:list.html";
+        return "redirect:list";
     }
 
-    @RequestMapping(value = "/course/edit.html", method = RequestMethod.GET)
+    @RequestMapping(value = "/course/edit", method = RequestMethod.GET)
     public String edit( @RequestParam Long id, ModelMap models )
     {
         models.put( "course", courseDao.getCourse( id ) );
         return "course/edit";
     }
 
-    @RequestMapping(value = "/course/edit.html", method = RequestMethod.POST)
+    @RequestMapping(value = "/course/edit", method = RequestMethod.POST)
     public String edit( @ModelAttribute Course course )
     {
         course = courseDao.saveCourse( course );
-        return "redirect:list.html";
+        return "redirect:list";
     }
 
 }

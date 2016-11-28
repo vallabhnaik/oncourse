@@ -14,14 +14,14 @@ public class ProgramController {
     @Autowired
     private ProgramDao programDao;
 
-    @RequestMapping("/program/list.html")
+    @RequestMapping("/program/list")
     public String list( ModelMap models )
     {
         models.put( "programs", programDao.getPrograms() );
         return "program/list";
     }
 
-    @RequestMapping("/program/view.html")
+    @RequestMapping("/program/view")
     public String view( @RequestParam Long id, ModelMap models )
     {
         models.put( "program", programDao.getProgram( id ) );
