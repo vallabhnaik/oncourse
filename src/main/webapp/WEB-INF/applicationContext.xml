@@ -45,7 +45,7 @@
 
     <security:http auto-config="true" use-expressions="true">
         <security:csrf disabled="true" />
-        <security:form-login login-page="/login.html" />
+        <security:form-login login-page="/login" />
         <security:logout logout-success-url="/" />
         <security:intercept-url pattern="/course/**" access="hasAnyRole('ADMIN','ADVISOR')" />
         <security:intercept-url pattern="/department/**" access="hasAnyRole('ADMIN','ADVISOR')" />

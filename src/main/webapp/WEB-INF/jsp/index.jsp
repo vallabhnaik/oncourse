@@ -10,15 +10,15 @@
 <h2>OnCourse</h2>
 <p>
   <security:authorize access="anonymous">
-    <a href="<c:url value='/login.html' />">Login</a>
+    <a href="<c:url value='/login' />">Login</a>
   </security:authorize>
   <security:authorize access="authenticated">
     <security:authorize access="hasAnyRole('ADMIN','ADVISOR')">
-      <a href="course/list.html">Courses</a> |
-      <a href="department/list.html">Departments</a> |
-      <a href="program/list.html">Programs</a> |
+      <a href="course/list">Courses</a> |
+      <a href="department/list">Departments</a> |
+      <a href="program/list">Programs</a> |
     </security:authorize>
-    <a href="grade/list.html">Grades</a> |
+    <a href="grade/list">Grades</a> |
     <a href="<c:url value='/logout' />">Logout</a>
   </security:authorize>
 </p>
